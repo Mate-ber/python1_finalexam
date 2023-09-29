@@ -16,8 +16,12 @@ def payload(card_num):
         for nums in arr_mult_nums:
             sum_for_test += nums
         sum_digits += sum_for_test
-        if(mult==2):mult=1
-        else:mult=2
+        if(mult==2):
+            mult=1
+        else:
+            mult=2
+    if sum_digits%10==0:
+        return 0
     return 10-sum_digits%10
 
 card_num = int( input("Input card number:") )
