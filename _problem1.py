@@ -18,17 +18,7 @@ def payload(card_num):
         sum_digits += sum_for_test
         if(mult==2):mult=1
         else:mult=2
-    ceil_sum = 0
-    if sum_digits%10 != 0:
-        ceil_sum = sum_digits // 100
-        last_dig = sum_digits // 10
-        last_dig = last_dig % 10
-        ceil_sum *= 10
-        ceil_sum += last_dig+1
-        ceil_sum *= 10
-    else:
-        ceil_sum = sum_digits
-    return ceil_sum - sum_digits
+    return 10-sum_digits%10
 
 card_num = int( input("Input card number:") )
 print(f"Checker is: {payload(card_num)}")
