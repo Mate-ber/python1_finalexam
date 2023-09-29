@@ -4,7 +4,9 @@ def count_dups(str_dups):
     ans = 0
     for i in range( len(str_dups) ):
         if str_dups[i] in dict_letters:
-            ans += 1
+            if dict_letters[str_dups[i]] == 1:
+                ans += 1
+            dict_letters[str_dups[i]] += 1
         else:
             dict_letters[str_dups[i]] = 1
     return ans
